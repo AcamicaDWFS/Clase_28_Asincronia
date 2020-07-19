@@ -1,0 +1,27 @@
+main {
+  padding: 0 8%;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 50px 0 25px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  line-height: 35px;
+
+  .card {
+    text-align: center;
+    margin: 25px 8%;
+    border-radius: 25px;
+    box-shadow: $shadow;
+  }
+
+  img {
+    margin-top: 25px;
+  }
+}

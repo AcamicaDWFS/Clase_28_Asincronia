@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio de E-Commerce</title>
+    <script
+      src="https://kit.fontawesome.com/ea48900f4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="top-nav">
+        <div class="item-self">
+          <img
+            src="https://www.cyberpuerta.mx/out/cyberpuertaV5/img/logo2.png"
+            alt=""
+          />
+        </div>
+
+        <ul class="lista-nav">
+          <li class="search-bar">
+            <div class="searchbar">
+              <input
+                type="text"
+                name="search"
+                placeholder="Busca tus productos"
+                class="searchbar-input"
+              />
+            </div>
+          </li>
+          <li class="carrito">
+            <a href="#">
+              <img
+                src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_208967.png&f=1&nofb=1"
+                alt="_blank"
+              />
+
+              <span id="number">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section id="cart-box">
+        <h3>Tu carrito</h3>
+
+        <span class="close"></span>
+
+        <h3 id="total">Total: <span>$0</span></h3>
+
+        <div id="cart-container"></div>
+
+        <button id="pay-btn">Proceder al pago</button>
+      </section>
+    </header>
+
+    <main>
+      <h2>Lo más vendido</h2>
+
+      <section class="grid">
+        <div class="card">
+          <img src="images/product1.jpg" alt="Producto 1" />
+          <h3>Mouse</h3>
+          <p>Marca: <span class="brand">Corsair</span></p>
+          <p>Modelo: <span class="model">Scimitar Pro RGB</span></p>
+          <p>Precio: $<span class="price">1,799</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product2.jpg" alt="Producto 2" />
+          <h3>Teclado</h3>
+          <p>Marca: <span class="brand">Corsair</span></p>
+          <p>Modelo: <span class="model">K70 RGB</span></p>
+          <p>Precio: $<span class="price">1,899</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product3.jpg" alt="Producto 3" />
+          <h3>Monitor</h3>
+          <p>Marca: <span class="brand">Acer</span></p>
+          <p>Modelo: <span class="model">K242HQL</span></p>
+          <p>Precio: $<span class="price">2,299</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product4.jpg" alt="Producto 4" />
+          <h3>Tarjeta Gráfica</h3>
+          <p>Marca: <span class="brand">Gigabyte</span></p>
+          <p>Modelo: <span class="model">Windforce RTX 2060</span></p>
+          <p>Precio: $<span class="price">4,599</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product5.jpg" alt="Producto 5" />
+          <h3>Disipador</h3>
+          <p>Marca: <span class="brand">Cooler Master</span></p>
+          <p>Modelo: <span class="model">Hyper 212 EVO</span></p>
+          <p>Precio: $<span class="price">599</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product6.jpg" alt="Producto 6" />
+          <h3>Memoria RAM</h3>
+          <p>Marca: <span class="brand">Corsair</span></p>
+          <p>Modelo: <span class="model">2x8 Vengeance RGB Pro</span></p>
+          <p>Precio: $<span class="price">3,299</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product7.jpg" alt="Producto 7" />
+          <h3>Gabinete</h3>
+          <p>Marca: <span class="brand">NZXT</span></p>
+          <p>Modelo: <span class="model">A363-TB</span></p>
+          <p>Precio: $<span class="price">1,999</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product8.jpg" alt="Producto 8" />
+          <h3>Fuente de poder</h3>
+          <p>Marca: <span class="brand">Antec</span></p>
+          <p>Modelo: <span class="model">HCP-850</span></p>
+          <p>Precio: $<span class="price">1,499</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+
+        <div class="card">
+          <img src="images/product9.jpg" alt="Producto 9" />
+          <h3>Motherboard</h3>
+          <p>Marca: <span class="brand">MSI</span></p>
+          <p>Modelo: <span class="model">Z390-A Prime</span></p>
+          <p>Precio: $<span class="price">1,699</span></p>
+          <button>Añadir al carrito</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h2>© 2020 - Cyberpuerta</h2>
+      <section class="foot_nav">
+        <div class="info">
+          <div class="us">
+            <h3>Conócenos</h3>
+            <ul>
+              <li>Bolsa de trabajo</li>
+              <li>Información Corporativa</li>
+              <li>Prensa</li>
+            </ul>
+          </div>
+          <div class="money">
+            <h3>Métodos de pago</h3>
+            <ul>
+              <li>Tarjetas de crédito y débito</li>
+              <li>Tarjetas de regalo</li>
+              <li>Meses sin intereses</li>
+            </ul>
+          </div>
+          <div class="soporte">
+            <h3>Soporte al cliente</h3>
+            <ul>
+              <li>Facturación</li>
+              <li>Ayuda</li>
+              <li>Mis pedidos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="foot_last">
+        <p>Comentarios y sugerencias: atencion@ecommerce.com</p>
+        <p>Términos y condiciones / Aviso de privacidad / Mapa del sitio</p>
+
+        <div class="icons">
+          <a
+            href="https://www.instagram.com/"
+            class="link_icon"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-instagram fa-1g"></i
+          ></a>
+          <a
+            href="https://twitter.com/"
+            class="link_icon"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-twitter fa-1g"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/"
+            class="link_icon"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fab fa-facebook fa-1g"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
