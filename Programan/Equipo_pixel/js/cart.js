@@ -83,49 +83,56 @@ for (let button of buttons) {
 }
 
 function showAlertAñadir() {
-  swal({
+  Swal.fire({
     icon: "success",
-    type: "info",
     text: "Producto Añadido",
     timer: 2000,
-    button: false,
   });
 }
 
 function addDeleteListener(button) {
   button.addEventListener("click", (evt) => {
-    const productToRemove = evt.target.parentElement;
-    const nodes = Array.prototype.slice.call(cartContainer.children);
-    const pos = nodes.indexOf(productToRemove);
-
-    productToRemove.remove();
-    cart.splice(pos, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    notification.innerText = cart.length;
-
-    cart.length === 0
-      ? hideCart()
-      : (total.innerText = `$${formatNum(getTotal(cart))}`);
-
-    showAlertDelete();
+    showAlertDelete(evt);
   });
 }
 
-function showAlertDelete() {
-  swal({
+function showAlertDelete(evt) {
+  Swal.fire({
     title: "¿Estás seguro?",
     text: "El producto se eliminará de tu lista de compras",
     icon: "warning",
-    button: true,
-    dangerMode: true,
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sí",
+    cancelButtonText: "No",
+  }).then((result) => {
+    if (result.value) {
+      deleteFromCart(evt);
+    }
   });
+}
+
+function deleteFromCart(evt) {
+  const productToRemove = evt.target.parentElement;
+  const nodes = Array.prototype.slice.call(cartContainer.children);
+  const pos = nodes.indexOf(productToRemove);
+
+  productToRemove.remove();
+  cart.splice(pos, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  notification.innerText = cart.length;
+
+  cart.length === 0
+    ? hideCart()
+    : (total.innerText = `$${formatNum(getTotal(cart))}`);
 }
 
 cartBtn.addEventListener("click", () => {
   cart.length !== 0
     ? showCart()
-    : swal({
+    : Swal.fire({
         text: "Aún no hay productos en el carrito.",
         icon: "error",
       });
