@@ -77,6 +77,18 @@ for (let button of buttons) {
 
     const rmButton = product.htmlCartItem.querySelector("i");
     addDeleteListener(rmButton);
+
+    showAlertAñadir();
+  });
+}
+
+function showAlertAñadir() {
+  swal({
+    icon: "success",
+    type: "info",
+    text: "Producto Añadido",
+    timer: 2000,
+    button: false,
   });
 }
 
@@ -95,13 +107,28 @@ function addDeleteListener(button) {
     cart.length === 0
       ? hideCart()
       : (total.innerText = `$${formatNum(getTotal(cart))}`);
+
+    showAlertDelete();
+  });
+}
+
+function showAlertDelete() {
+  swal({
+    title: "¿Estás seguro?",
+    text: "El producto se eliminará de tu lista de compras",
+    icon: "warning",
+    button: true,
+    dangerMode: true,
   });
 }
 
 cartBtn.addEventListener("click", () => {
   cart.length !== 0
     ? showCart()
-    : alert("Aún no hay productos en el carrito.");
+    : swal({
+        text: "Aún no hay productos en el carrito.",
+        icon: "error",
+      });
 });
 
 closeButton.addEventListener("click", () => {
